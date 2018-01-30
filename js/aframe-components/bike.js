@@ -35,13 +35,8 @@ AFRAME.registerComponent('bike', {
         elGift.setAttribute('collider-check', {});
         // Adding Ray as chils entity
         var elRay = document.createElement('a-entity');
-        elRay.setAttribute('raycaster',
-                            {objects    : '.collidable', 
-                             direction  : {x:0, y:0, z:-1},
-                             origin     : {x:el.object3D.position.x, y:el.object3D.position.y, z:el.object3D.position.z}
-                            }
-                        );
-        elGift.appendChild(elRay);
+        elRay.setAttribute('raycaster', 'objects: .collidable; direction:0 0 1; far:1.0; near:0.01; showLine: true;');
+		elGift.appendChild(elRay);
         this.el.sceneEl.appendChild(elGift);
     }   
   },

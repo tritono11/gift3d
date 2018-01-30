@@ -15,6 +15,6 @@ AFRAME.registerComponent('gift', {
   },
   tick: function () {
     var el = this.el;
-    el.object3D.translateZ(this.data.speed*2);
+    el.object3D.translateZ(this.data.speed);
   }
 });
