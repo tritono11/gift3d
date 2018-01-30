@@ -29,14 +29,13 @@ AFRAME.registerComponent('bike', {
         var elGift = document.createElement('a-sphere');
         elGift.setAttribute('scale', {x:0.1, y:0.1, z:0.1});
         elGift.setAttribute('gift', {speed:0.05, initPos:{x:el.object3D.position.x, y:el.object3D.position.y, z:el.object3D.position.z} });
-        elGift.setAttribute('static-body', { mass:0.0, shape:'sphere' } );
         
         // Collision with raycast
         elGift.setAttribute('collider-check', {});
         // Adding Ray as chils entity
         var elRay = document.createElement('a-entity');
-        elRay.setAttribute('raycaster', 'objects: .collidable; direction:0 0 1; far:1.0; near:0.01; showLine: true;');
-		elGift.appendChild(elRay);
+        elRay.setAttribute('raycaster', 'objects: .collidable; direction:0 0 1; far:10.0; near:0.01; showLine: true;');
+        elGift.appendChild(elRay);
         this.el.sceneEl.appendChild(elGift);
     }   
   },
