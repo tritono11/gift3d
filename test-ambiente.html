@@ -35,12 +35,12 @@
                 <a-asset-item id="bike" src="js/aframe-components/aframe/bike/scene.gltf"></a-asset-item>
                 <a-asset-item id="bike2" src="js/aframe-components/aframe/bike2/scene.gltf"></a-asset-item>
                 <a-asset-item id="strada" src="js/aframe-components/aframe/strada/strada.gltf"></a-asset-item>
-				<a-asset-item id="strada" src="js/aframe-components/aframe/arms/scene.gltf"></a-asset-item>
+				<a-asset-item id="arms" src="js/aframe-components/aframe/arms/scene.gltf"></a-asset-item>
             </a-assets>
             <!-- CAMERA -->
             <a-camera>
 				<a-light type="spot" color="white" position="0 1.6 0" light="decay: 2.28; penumbra: 0.92; intensity: 0.45; castShadow: true; angle: 10; type: spot; color: white"></a-light>
-                
+                <a-entity gltf-model="#arms" position="-0.014 -3.098 0.017" scale="0.020 0.020 0.020" rotation="0 180.0 0" ></a-entity>
 			</a-camera>
             <!-- Env -->
             <a-entity environment="active:true;
